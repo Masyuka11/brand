@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навігаційна панель Bootstrap</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+    crossorigin="anonymous">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .navbar-nav .nav-link {
+      color: var(--bs-dark) !important;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link.active {
+      color: var(--bs-primary) !important;
+      font-weight: 500;
+    }
+
+    section {
+      scroll-margin-top: 56px;
+    }
+  </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="70" data-bs-root-margin="-70px 0px -60%" tabindex="0">
+
+  <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white sticky-top shadow-sm" data-bs-theme="light">
+    <div class="container">
+
+      <a class="navbar-brand fw-bold text-primary" href="#home">MyBrand</a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar" aria-label="Відкрити меню">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="offcanvasNavbar"
+           aria-labelledby="offcanvasNavbarLabel" data-bs-scroll="false" data-bs-backdrop="true">
+
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                  data-bs-target="#offcanvasNavbar" aria-label="Закрити"></button>
+        </div>
+
+        <div class="offcanvas-body">
+          <ul class="navbar-nav flex-grow-1 justify-content-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Головна</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Про нас</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false">Послуги</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#web">Веб-розробка</a></li>
+                <li><a class="dropdown-item" href="#design">Дизайн</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contacts">Контакти</a>
+            </li>
+          </ul>
+
+          <form class="d-flex mt-3 mt-lg-0" role="search">
+            <input class="form-control rounded-pill me-2" type="search"
+                   placeholder="Пошук" aria-label="Пошук">
+            <button class="btn btn-outline-primary rounded-pill" type="submit">Знайти</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="min-vh-100 bg-light d-flex align-items-center">
+    <div class="container">
+      <h1 class="display-4">Головна</h1>
+      <p class="lead">Прокручуйте сторінку — пункт меню підсвічується автоматично.</p>
+    </div>
+  </section>
+
+  <section id="about" class="min-vh-100 bg-dark text-white d-flex align-items-center">
+    <div class="container">
+      <h2 class="display-5">Про нас</h2>
+      <p class="lead">Ми робимо адаптивні сайти на Bootstrap 5.</p>
+    </div>
+  </section>
+
+  <section id="web" class="min-vh-100 bg-light d-flex align-items-center">
+    <div class="container">
+      <h2 class="display-5">Веб-розробка</h2>
+      <p class="lead">Верстка, адаптивність і компоненти для вашого проєкту.</p>
+    </div>
+  </section>
+
+  <section id="design" class="min-vh-100 bg-dark text-white d-flex align-items-center">
+    <div class="container">
+      <h2 class="display-5">Дизайн</h2>
+      <p class="lead">Інтерфейси, які зручно використовувати на будь-якому пристрої.</p>
+    </div>
+  </section>
+
+  <section id="contacts" class="min-vh-100 bg-light d-flex align-items-center">
+    <div class="container">
+      <h2 class="display-5">Контакти</h2>
+      <p class="lead">Напишіть нам: hello@example.com</p>
+    </div>
+  </section>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+</body>
+</html>
